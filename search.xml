@@ -4,6 +4,48 @@
   
     
     <entry>
+      <title>将自己的代码提交到码云</title>
+      <link href="/2020/09/09/%E5%B0%86%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BB%A3%E7%A0%81%E6%8F%90%E4%BA%A4%E5%88%B0%E7%A0%81%E4%BA%91/"/>
+      <url>/2020/09/09/%E5%B0%86%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BB%A3%E7%A0%81%E6%8F%90%E4%BA%A4%E5%88%B0%E7%A0%81%E4%BA%91/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-创建一个码云仓库"><a href="#1-创建一个码云仓库" class="headerlink" title="1.创建一个码云仓库"></a>1.创建一个码云仓库</h2><p>登录自己的码云账号，创建一个自己的仓库<br><img src="https://img-blog.csdnimg.cn/20200730222523917.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNTk3MjU2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p><strong>标红的地方一定要勾选，如果没有初始化仓库，对于初学者来说会很麻烦</strong></p><h2 id="2-初始化本地仓库"><a href="#2-初始化本地仓库" class="headerlink" title="2. 初始化本地仓库"></a>2. 初始化本地仓库</h2><p>在自己的项目文件夹下，右键选择 git bash here<br>然后在终端中输入<strong>git init</strong><br><img src="https://img-blog.csdnimg.cn/20200730213326229.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNTk3MjU2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h2 id="2-仓库关联"><a href="#2-仓库关联" class="headerlink" title="2.仓库关联"></a>2.仓库关联</h2><p>将本地仓库与码云上的仓库关联起来。<br>先打开自己创建的码云仓库，复制链接地址<br><img src="https://img-blog.csdnimg.cn/20200730222701700.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNTk3MjU2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p>然后在终端中输入<strong>git remote add origin + 你刚刚在码云复制的那行路径</strong><br><img src="https://img-blog.csdnimg.cn/20200730221350996.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNTk3MjU2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h2 id="3-将远程仓库pull到本地仓库"><a href="#3-将远程仓库pull到本地仓库" class="headerlink" title="3. 将远程仓库pull到本地仓库"></a>3. 将远程仓库pull到本地仓库</h2><p>这一步骤是为了先将远程的代码拉下来，就算你刚创建的空仓库，也要操作，养成好习惯，避免出错。在终端中输入<strong>git pull origin master</strong>。表示从master分支中拉取代码<br><img src="https://img-blog.csdnimg.cn/20200730221428556.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNTk3MjU2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><code>如果你的执行结果跟上图一样，请忽略下面的字体，直接跳转到第四步</code></p><p><strong>如果出现下图的报错，则是创建仓库的时候，没有初始化造成的</strong><br><img src="https://img-blog.csdnimg.cn/2020073021433226.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNTk3MjU2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>如果已经初始化过仓库的小伙伴，是不会报这个错误的</strong>，在创建仓库的时候选择使用readme文件初始化这个仓库是不会出现这个问题的。<br><img src="https://img-blog.csdnimg.cn/20200730222523917.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNTk3MjU2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p>如果没有初始化也不必担心，可以按照红色框中的方法来解决这个问题，此时在终端中执行一下命令，就初始化这个仓库了，<strong>将刚才仓库中的readme.md文件删除</strong>，接着进行操作。<br>执行完上面所有的命令后，发现已经有了主分支了，咱们就可以继续操作，提交代码了。</p><p>接着输入<strong>git pull origin master</strong>，从远程更新代码。<br><img src="https://img-blog.csdnimg.cn/20200730214901426.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNTk3MjU2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h2 id="4-将文件保存到缓冲区"><a href="#4-将文件保存到缓冲区" class="headerlink" title="4.将文件保存到缓冲区"></a>4.将文件保存到缓冲区</h2><p>输入git add . 表示将所有的文件都添加进去，当然也可以选择使用<br>git add + 文件名 提交具体的某个文件。<br><img src="https://img-blog.csdnimg.cn/20200730221907512.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNTk3MjU2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h2 id="5-添加文件描述"><a href="#5-添加文件描述" class="headerlink" title="5.添加文件描述"></a>5.添加文件描述</h2><p>使用git commit -m ‘新添加的文件内容描述’ //添加文件描述<br>输入的命令行，按回车。发现此时正在提交，需要稍微等待一会。<br><img src="https://img-blog.csdnimg.cn/20200730222001818.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNTk3MjU2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p>提交完成后的运行情况：<br><img src="https://img-blog.csdnimg.cn/20200730222015607.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNTk3MjU2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h2 id="6-推送"><a href="#6-推送" class="headerlink" title="6.推送"></a>6.推送</h2><p>刚才的提交是提交到了本地仓库，此时还没有推送到远程仓库，接着输入命令，<strong>git push origin master</strong>推送到远程仓库。<br><img src="https://img-blog.csdnimg.cn/20200730222114178.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNTk3MjU2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>提示正在上传，上传完成后的运行结果如下：<br><img src="https://img-blog.csdnimg.cn/2020073022215523.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNTk3MjU2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>打开自己的码云，刷新仓库，会发现此时咱们的代码已经更新成功啦！<br><img src="https://img-blog.csdnimg.cn/20200730222848239.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNTk3MjU2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h2 id="注：如果提交代码时出现error-failed-to-push-some-refs-to-‘https-github-com-xxxx-git’"><a href="#注：如果提交代码时出现error-failed-to-push-some-refs-to-‘https-github-com-xxxx-git’" class="headerlink" title="注：如果提交代码时出现error: failed to push some refs to ‘https://github.com/xxxx.git’"></a>注：如果提交代码时出现error: failed to push some refs to ‘<a href="https://github.com/xxxx.git’" target="_blank" rel="noopener">https://github.com/xxxx.git’</a></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.强制push本地仓库到远程 (这种情况不会进行merge, 强制push后远程文件可能会丢失)</span><br><span class="line">$ git push -u origin master -f</span><br><span class="line"> </span><br><span class="line"> 2. 避开解决冲突, 将本地文件暂时提交到远程新建的分支中，创建完branch后, 再进行push。</span><br><span class="line">$ git branch [name]</span><br><span class="line">$ git push -u origin [name] </span><br><span class="line">123456</span><br></pre></td></tr></table></figure><p>个人推荐使用：<br>git push -u origin master -f<br>简单粗暴且有效！缺点就是强制push后远程文件可能会丢失😄</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+            <tag> gitee </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>css居中</title>
+      <link href="/2020/09/02/css%E5%B1%85%E4%B8%AD/"/>
+      <url>/2020/09/02/css%E5%B1%85%E4%B8%AD/</url>
+      
+        <content type="html"><![CDATA[<h1 id="css垂直居中的几种方式"><a href="#css垂直居中的几种方式" class="headerlink" title="css垂直居中的几种方式"></a>css垂直居中的几种方式</h1><p>敲黑板！！！划重点，css垂直居中还是很常用的，例如，这个</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/otfIrRhFJ9puQ9dXEVO6nUp7r2NqzDvRfwhic8ZdhnW2DemSTllanbHiaSNfefhN55hKlfbbDCO4W6AYJFW1OL2Q/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt=""></p><p>这是个非常常见的居中案例，</p><p>你可以用：absolute + 负margin 或 absolute + margin auto 来实现上图的效果</p><ul><li>absolute + 负margin </li><li>absolute + margin auto </li></ul><h2 id="absolute-margin-auto"><a href="#absolute-margin-auto" class="headerlink" title="absolute + margin auto"></a>absolute + margin auto</h2><p>这种方式通过设置各个方向的距离都是0，此时再讲margin设为auto，就可以在各个方向上居中了</p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">123</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><p>css：</p><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: orange;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="absolute-负margin"><a href="#absolute-负margin" class="headerlink" title="absolute + 负margin"></a>absolute + 负margin</h2><p>绝对定位的百分比是相对于父元素的宽高，通过这个特性可以让子元素的居中显示，但绝对定位是基于子元素的左上角，期望的效果是子元素的中心居中显示</p><p>为了修正这个问题，可以借助外边距的负值，负的外边距可以让元素向相反方向定位，通过指定子元素的外边距为子元素宽度一半的负值，就可以让子元素居中了，css代码如下</p><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: orange;</span><br><span class="line">    <span class="attribute">top</span>:<span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: -<span class="number">100px</span>; <span class="comment">/* 高度的一半 */</span></span><br><span class="line">    <span class="attribute">margin-left</span>: -<span class="number">100px</span>;<span class="comment">/* 宽度的一半 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>这是我比较常用的方式，这种方式比较好理解，兼容性也很好，缺点是需要知道子元素的宽高</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+            <tag> 居中 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>css清除浮动的几种方法</title>
       <link href="/2020/09/02/css%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/"/>
       <url>/2020/09/02/css%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/</url>
@@ -25,37 +67,53 @@
     
     
     <entry>
+      <title>定位与浮动</title>
+      <link href="/2020/08/10/%E5%AE%9A%E4%BD%8D%E4%B8%8E%E6%B5%AE%E5%8A%A8/"/>
+      <url>/2020/08/10/%E5%AE%9A%E4%BD%8D%E4%B8%8E%E6%B5%AE%E5%8A%A8/</url>
+      
+        <content type="html"><![CDATA[<h1 id="定位与浮动"><a href="#定位与浮动" class="headerlink" title="定位与浮动"></a>定位与浮动</h1><h2 id="一、定位"><a href="#一、定位" class="headerlink" title="一、定位"></a>一、定位</h2><p>1.相对定位position: relative; 父级的定位属性通常是相对定位</p><p>相对定位,是相对于元素原来位置进行移动,仍在文档流中</p><p>2.绝对定位 position:absolute;</p><p>绝对定位使当前元素脱离了文档流,相当于在文档流中删除了这个元素</p><p>4.固定定位 position:fixed;</p><p>元素脱离文档流,相对于窗口定位,固定在页面上,并且不随页面滚动（如在线QQ客服）</p><h2 id="二、浮动"><a href="#二、浮动" class="headerlink" title="二、浮动"></a>二、浮动</h2><p>1.浮动的原理</p><p>浮动元素脱离了文档流, 如果第二个色块也浮动的话，第二个色块也脱离了文档流,与第一个是在同一个平面中,它会一直向右侧移动,直到碰到窗口最右侧停止。</p><p>将行内元素进行浮动后,将会脱离文档流,从而使其支持宽高设置。</p><p>2.同级元素之间的清除浮动的技巧</p><p>clear: left; 清除左浮动:该元素的左边不允许出现浮动元素而当前它的左边有浮动元素,而自己本身又是块元素,只能掉到下一行首开始显示。</p><p>clear: right;同上</p><p>clear:both;该元素的左右二边都禁止出现浮动元素</p><p>3.层次元素之间的清除浮动的技巧 </p><p>让父元素包住浮动的子元素，给父元素添加:after伪类,在后面添加一个空元素,直接设置它的属性即可</p><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.parent</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    </span><br><span class="line">              <span class="comment">/*1.添加一个空元素*/</span></span><br><span class="line"></span><br><span class="line">              <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line">              <span class="comment">/*2.默认为行内元素,所以要转为块元素*/</span></span><br><span class="line"></span><br><span class="line">              <span class="attribute">display</span>: block;</span><br><span class="line"></span><br><span class="line">              <span class="comment">/*3.直接清除二边的浮动*/</span></span><br><span class="line"></span><br><span class="line">              <span class="attribute">clear</span>: both;</span><br><span class="line"></span><br><span class="line">              <span class="comment">/*如果ie下显示有问题,可以加上*/</span></span><br><span class="line"></span><br><span class="line">              <span class="comment">/*z-index: 1;*/</span></span><br><span class="line"></span><br><span class="line">              <span class="comment">/*可能有的地方是这样写的:*/</span></span><br><span class="line"></span><br><span class="line">              <span class="comment">/*添加一个空格*/</span></span><br><span class="line"></span><br><span class="line">              <span class="comment">/*content: '\0020';*/</span></span><br><span class="line"></span><br><span class="line">              <span class="comment">/*然后让这个空格高度为0,这样就根本不会显示出来*/</span></span><br><span class="line"></span><br><span class="line">              <span class="comment">/*height: 0;*/</span></span><br><span class="line">    </span><br><span class="line">          &#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> position </tag>
+            
+            <tag> float </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>什么是BFC</title>
+      <link href="/2020/08/06/%E4%BB%80%E4%B9%88%E6%98%AFBFC/"/>
+      <url>/2020/08/06/%E4%BB%80%E4%B9%88%E6%98%AFBFC/</url>
+      
+        <content type="html"><![CDATA[<h2 id="什么是BFC"><a href="#什么是BFC" class="headerlink" title="什么是BFC"></a>什么是BFC</h2><p>什么是BFC</p><p>英文：Block Formatting Context</p><p>中文：块级格式化上下文</p><p>本人理解的BFC概念就是一个容器内部的子元素布局不影响容器外部元素的布局。</p><p>触发BFC的条件</p><ol><li><p>根元素    （当前文档中 html 标签就是一个BFC）</p></li><li><p>float 的值不为 none</p></li><li><p>overflow 的值为 hidden，auto，scroll</p></li><li><p>display 的值为 inline-block 、 table-cell 、 table-caption 、 flex 、 inline-flex</p></li><li><p>position 的值为 absolute 或 fixed</p></li></ol><p>BFC应用场景</p><p>1、两栏自适应布局 这个在以前介绍定位的时候有提过。</p><p>2、解决高度坍塌问题 也就是清除浮动 </p><p>3、解决外边距重叠问题</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+            <tag> BFC </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Markdown基本语法介绍</title>
       <link href="/2020/05/16/Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E4%BB%8B%E7%BB%8D/"/>
       <url>/2020/05/16/Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E4%BB%8B%E7%BB%8D/</url>
       
         <content type="html"><![CDATA[<h1 id="Markdown基本语法介绍"><a href="#Markdown基本语法介绍" class="headerlink" title="Markdown基本语法介绍"></a>Markdown基本语法介绍</h1><p>因为现在的前端基本上都用上了前端构建工具，那就难免要写一些readme等等的说明性文件，但是这样的文件一般都是.md的文件，编写的语法自然跟其他格式的文件有所区别，本文也是我学习写markdown文件的一个笔记吧，仅供参考！  </p><h2 id="1、标题"><a href="#1、标题" class="headerlink" title="1、标题"></a>1、标题</h2><p>在想要设置为标题的文字前面加上#来表示。<br>一个#是一级标题，两个#是二级标题，以此类推，最多到六级，和html中的h1-h6相同。<br>示例：<br><img src="https://images2015.cnblogs.com/blog/600165/201701/600165-20170121165256359-1045755089.png" alt=""><br>前面带#号，后面带文字，分别表示h1-h6,上图可以看出，只到h6，而且h1下面会有一条横线，注意，#号后面有空格</p><h2 id="2、列表"><a href="#2、列表" class="headerlink" title="2、列表"></a>2、列表</h2><p>我们都知道，列表分为有序列表和无序列表，下面直接展示2种列表的写法：<br><img src="https://images2015.cnblogs.com/blog/600165/201701/600165-20170121171909093-661987876.png" alt=""> </p><ul><li>1  </li><li>2  </li><li>3  </li><li>4  </li><li>5  </li><li>6  </li></ul><p>可以看到，无序列表可以用* ， + ， - 来创建，用在线编辑器看，实际上是转换成了ul&gt;li ，所以使用哪个都可以，推荐使用 - 吧   </p><h2 id="3、区块引用"><a href="#3、区块引用" class="headerlink" title="3、区块引用"></a>3、区块引用</h2><p>比如说，你想对某个部分做的内容做一些说明或者引用某某的话等，可以用这个语句   </p><p><code>&gt;这块区域表示引用</code>  </p><p>效果：    </p><blockquote><p>这块区域表示引用    </p></blockquote><p>引用因为是一个区块，理论上是应该什么内容都可以放，比如说：标题，列表，引用等等    </p><p>想要在上一次引用中嵌套一层引用，只需多加一个&gt;，理论上可以无限嵌套，这里就不演示那么多了，注意：多层嵌套的&gt;是不需要连续在一起的，只要在一行就可以了，中间允许有空格，但是为了好看，还是把排版搞好吧  </p><h2 id="4、华丽的分割线"><a href="#4、华丽的分割线" class="headerlink" title="4、华丽的分割线"></a>4、华丽的分割线</h2><p>分割线可以由* - _（星号，减号，底线）这3个符号的至少3个符号表示，注意至少要3个，且不需要连续，有空格也可以  </p><p><code>***</code><br><code>------</code><br><code>___</code>    </p><p>效果：  </p><hr><hr><hr><h2 id="5、链接"><a href="#5、链接" class="headerlink" title="5、链接"></a>5、链接</h2><p>支持2种链接方式：行内式和参数式，不管是哪一种，链接文字都是用 [方括号] 来标记。  </p><p><code>[百度](https://www.baidu.com/)百度一下，你就知道</code></p><p>效果：<br><a href="https://www.baidu.com/" target="_blank" rel="noopener">百度</a>百度一下，你就知道    </p><p>行内式的链接格式是：链接的文字放在[]中，链接地址放在随后的（）中 ，链接还可以带title属性，好像也只能带title，带不了其他属性，注意，是链接地址后面空一格，然后用引号引起来</p><p>6、图片  </p><p>用法跟链接的基本一样，唯一的不同就是，图片前面要写一个！（这是必须的），没什么好说的</p><p><code>![百度logo](https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png)</code>   </p><p>效果：  </p><p><img src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" alt="百度logo">    </p><p>7、代码框</p><p>这个就比较重要了，很多时候都需要展示出一些代码</p><p>如果代码量比较少，只有单行的话，可以用单反引号包起来，如下：<br><code>&lt;h1&gt;这是一个标题。&lt;/h1&gt;</code><br>要是多行这个就不行了，多行可以用这个：  </p><pre><code>&lt;h1&gt;这是一个标题。&lt;/h1&gt;&lt;h2&gt;这是一个标题。&lt;/h2&gt;&lt;h3&gt;这是一个标题。&lt;/h3&gt;</code></pre><p>8、表格    </p><p>表格可以用Typora自动生成的表格(贼方便，推荐！！)  </p><p>9、删除线   </p><p>示例：<br><code>~~删除线~~</code><br>效果：<br><del>删除线</del></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>git01</title>
-      <link href="/2020/05/10/git01/"/>
-      <url>/2020/05/10/git01/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2020/05/10/hello-world/"/>
-      <url>/2020/05/10/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
       
       
       
